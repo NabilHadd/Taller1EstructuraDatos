@@ -198,14 +198,14 @@ Usuario** leerUsuarios(string file, MaterialBibliografico** materiales) {
         getline(stream, parte, '/');
         istringstream(parte) >> id;
 
-        //rellenamos el vector de isbn´s con los codigos presentes en la linea del usuario
+        //rellenamos el vector de isbnÂ´s con los codigos presentes en la linea del usuario
         int k = 0;
         while (getline(stream, parte, '/')) {
             ibsn[k] = new string(parte);
             k++;
         }
 
-        //buscamos los materiales asociados a dichos isbn´s y
+        //buscamos los materiales asociados a dichos isbnÂ´s y
         //los agregamos al vector "materialesPrestados"
         int j = 0;
         while (ibsn[j] != nullptr && j<5) {
@@ -619,7 +619,7 @@ int main() {
     //Inicia el ciclo correspondiente al segundo menu,
     //este menu consulta las acciones que desea llevar a 
     //cabo el usuario seleccionado anteriormente
-    cout << usuarios[z]->getNombre() << "; ¿Que desea hacer? (seleccione un numero)\n" << endl;
+    cout << usuarios[z]->getNombre() << "; Â¿Que desea hacer? (seleccione un numero)\n" << endl;
     
     while (true) {
 
@@ -889,7 +889,7 @@ int main() {
 
             //debido a que hay 2 metodos para buscarlo (disponibles para el usuario)
             //Se crea un submenu para que seleccione una opcion
-            cout << usuarios[z]->getNombre() << "; ¿Como desea buscarlo? (seleccione un numero)\n" << endl;
+            cout << usuarios[z]->getNombre() << "; Â¿Como desea buscarlo? (seleccione un numero)\n" << endl;
             while (true) {
                 cout << "(1) Busqueda por nombre." << endl;
                 cout << "(2) Busqueda por autor.\n" << endl;
